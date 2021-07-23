@@ -1,0 +1,22 @@
+.container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+  border: 1px solid red;
+  button {
+    width: 22rem;
+    height: 2.6rem;
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--lightGrey);
+    span {
+      width: 10%;
+    }
+  }
+  button:hover {
+    background-color: var(--lightGrey);
+  }
+}

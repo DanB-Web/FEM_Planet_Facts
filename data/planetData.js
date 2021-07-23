@@ -1,4 +1,4 @@
-[
+export const planetData = [
   {
     "name": "Mercury",
     "overview": {

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  //Height = 100% - header - planetFacts
+  height: calc(100vh - 5.4rem - 12rem);
+}
+
+.planetImage {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}

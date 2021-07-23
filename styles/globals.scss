@@ -1,16 +1,71 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .active-Mercury {
+    background-color: var(--mercury) !important;
+  }
+  .active-Venus {
+    background-color: var(--venus) !important;
+  }
+  .active-Earth {
+    background-color: var(--earth) !important;
+  }
+  .active-Mars {
+    background-color: var(--mars) !important;
+  }
+  .active-Jupiter {
+    background-color: var(--jupiter) !important;
+  }
+  .active-Saturn {
+    background-color: var(--saturn) !important;
+  }
+  .active-Uranus {
+    background-color: var(--uranus) !important;
+  }
+  .active-Neptune {
+    background-color: var(--neptune) !important;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Antonio", sans-serif;
+}
+
+html {
+  --white: #fff;
+  --black: #070724;
+  --darkGrey: #38384f;
+  --lightGrey: #838391;
+  --mercury: #419ebb;
+  --venus: #eda249;
+  --earth: #6f2ed6;
+  --mars: #d14c32;
+  --jupiter: #d83a34;
+  --saturn: #cd5120;
+  --uranus: #1ec2a4;
+  --neptune: #2d68f0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
 }

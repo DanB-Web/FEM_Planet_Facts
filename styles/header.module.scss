@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 5.4rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--lightGrey);
+  h1 {
+  }
+  nav ul {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    li {
+      margin-right: 1rem;
+    }
+  }
+}
