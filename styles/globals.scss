@@ -19,6 +19,9 @@ body {
   a {
     text-decoration: none;
   }
+  button:hover {
+    cursor: pointer;
+  }
   .active-Mercury {
     background-color: var(--mercury) !important;
   }
@@ -43,11 +46,55 @@ body {
   .active-Neptune {
     background-color: var(--neptune) !important;
   }
+  .mobile-Mercury {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--mercury) !important;
+  }
+  .mobile-Venus {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--venus) !important;
+  }
+  .mobile-Earth {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--earth) !important;
+  }
+  .mobile-Mars {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--mars) !important;
+  }
+  .mobile-Jupiter {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--jupiter) !important;
+  }
+  .mobile-Saturn {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--saturn) !important;
+  }
+  .mobile-Uranus {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--uranus) !important;
+  }
+  .mobile-Neptune {
+    font-weight: bolder;
+    border-bottom: 4px solid var(--neptune) !important;
+  }
 }
 
 h1,
 h2 {
   font-family: "Antonio", sans-serif;
+}
+
+h1,
+h2,
+p,
+a {
+  color: #fff;
+}
+
+h4,
+cite {
+  color: var(--lightGrey);
 }
 
 html {

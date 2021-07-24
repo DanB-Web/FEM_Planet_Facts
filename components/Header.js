@@ -1,7 +1,15 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from '@/styles/header.module.scss'
+import BurgerSVG from '../assets/icon-hamburger.svg'
 
 const Header = () => {
+
+  const router = useRouter()
+
+  const openMobileNav = () => {
+    router.push('../mobileNav')
+  }
 
   return (
     <div className={styles.container}>
@@ -10,46 +18,50 @@ const Header = () => {
         <ul>
           <li>
             <Link href='/planets/Mercury'>
-              <a>Mercury</a>
+              <a className={styles.mercury}>Mercury</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Venus'>
-              <a>Venus</a>
+              <a className={styles.venus}>Venus</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Earth'>
-              <a>Earth</a>
+              <a className={styles.earth}>Earth</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Mars'>
-              <a>Mars</a>
+              <a className={styles.mars}>Mars</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Jupiter'>
-              <a>Jupiter</a>
+              <a className={styles.jupiter}>Jupiter</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Saturn'>
-              <a>Saturn</a>
+              <a className={styles.saturn}>Saturn</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Uranus'>
-              <a>Uranus</a>
+              <a className={styles.uranus}>Uranus</a>
             </Link>
           </li>
           <li>
             <Link href='/planets/Neptune'>
-              <a>Neptune</a>
+              <a className={styles.neptune}>Neptune</a>
             </Link>
           </li>
         </ul>
       </nav>
+      <div className={styles.burger} onClick={openMobileNav}>
+        <BurgerSVG/>
+      </div>
+      
     </div>
     
   )

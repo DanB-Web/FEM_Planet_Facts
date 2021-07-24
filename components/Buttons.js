@@ -2,8 +2,6 @@ import styles from '@/styles/buttons.module.scss'
 
 const Buttons = ({setView, view, planet}) => {
 
-  //'view' to style selected button
-  
   const overviewView = {
     overview: true,
     internal: false,
@@ -25,17 +23,17 @@ const Buttons = ({setView, view, planet}) => {
       <button
         className={`${view.overview && "active-" + planet.name}`} 
         onClick={() => setView(overviewView)}>
-        <span>01</span>Overview
+        <span>01</span><p>Overview</p>
       </button>
       <button 
         className={`${view.internal && "active-" + planet.name}`} 
         onClick={() => setView(internalView)}>
-        <span>02</span>Internal Structure
+        <span>02</span><p>Internal Structure</p>
       </button>
       <button 
         className={`${view.geology && "active-" + planet.name}`}  
         onClick={() => setView(geologyView)}>
-        <span>03</span>Surface Geology
+        <span>03</span><p>Surface Geology</p>
       </button>
     </div>
   )

@@ -28,18 +28,21 @@ const PlanetInfo = ({planet, view, setView}) => {
 
   return (
     <div className={styles.container}>
-
-      <h1 className={styles.title}>{planet.name}</h1>
-
-      <p className={styles.content}>{content.contentText}</p>
-
-      <div className={styles.source}>
-        <cite>Source:</cite>
-        <a href={content.contentUrl} target="_blank" rel="noreferrer">Wikipedia</a>
-        <SourceSVG/>
+      
+      <div className={styles.info}>
+        <h1 className={styles.title}>{planet.name}</h1>
+        <p className={styles.content}>{content.contentText}</p>
+        <div className={styles.source}>
+          <cite>Source:</cite>
+          <a href={content.contentUrl} target="_blank" rel="noreferrer">Wikipedia</a>
+          <SourceSVG/>
+        </div> 
       </div>
 
-      <Buttons view={view} setView={setView} planet={planet}/>
+      <div className={styles.buttons}>
+        <Buttons view={view} setView={setView} planet={planet}/>
+      </div>
+
     </div>
   )
 }

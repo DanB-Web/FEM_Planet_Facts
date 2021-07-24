@@ -1,0 +1,27 @@
+.wrapper {
+  display: none;
+  top: 0;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--lightGrey);
+    button {
+      span {
+        display: none;
+      }
+      height: 3rem;
+      width: 30%;
+      background: transparent;
+      p {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .wrapper {
+    display: inline;
+  }
+}

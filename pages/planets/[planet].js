@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import MobileButtons from '@/components/MobileButtons'
 import Image from 'next/image'
 import Layout from '@/components/Layout'
 import PlanetInfo from '@/components/PlanetInfo'
@@ -31,50 +32,65 @@ const Planet = ({planet}) => {
   }, [router, planet.name])
 
   const imageSelector = () => {
+
     if (view.internal) { 
       return (
+        <div>
         <Image 
           width={imageSize} 
           height={imageSize} 
-          //layout='intrinsic'
           src={`/images/planet-${planet.name.toLowerCase()}-internal.svg`} 
           alt={`${planet.name} Internal Image`}></Image>
+        </div>
       )
-    }
-    else if (view.geology) {
+    } else {
       return (
-        <Image 
-          width={350} 
-          height={350} 
-          //layout='intrinsic'
-          src={`/images/geology-${planet.name.toLowerCase()}.png`} 
-          alt={`${planet.name} Geology Image`}></Image>
-      )
-    }
-    else {
-      return (
-        <Image 
+        <div>
+          <Image 
           width={imageSize} 
           height={imageSize} 
-          //layout='intrinsic'
           src={`/images/planet-${planet.name.toLowerCase()}.svg`} 
           alt={`${planet.name} Overview Image`}></Image>
+        </div> 
       )
     }
   }
 
+  const geologyImageSelector = () => {
+    return (
+      <Image 
+        width={200} 
+        height={200} 
+        src={`/images/geology-${planet.name.toLowerCase()}.png`} 
+        alt={`${planet.name} Geology Image`}>
+      </Image>
+    )
+  }
+
   return (
     <Layout>
-      <div className={styles.container}>
-        <div className={styles.planetImage}>
-          {imageSelector()}
+      <div className={styles.layout}>
+        <div className={styles.container}>
+          <MobileButtons
+            setView={setView}
+            view={view}
+            planet={planet}
+          />
+          <div className={styles.viewImages}>
+            <div className={styles.planetImage}>
+              {imageSelector()}
+            </div>
+            <div className={styles.geologyImage}>
+              {view.geology && geologyImageSelector()}
+            </div>
+          </div>
+            <PlanetInfo 
+              view={view}
+              setView={setView}
+              planet={planet}/>
         </div>
-        <PlanetInfo 
-          view={view}
-          setView={setView}
-          planet={planet}/>
+        <PlanetFacts planet={planet}/>
       </div>
-      <PlanetFacts planet={planet}/>
     </Layout>
   )
 }

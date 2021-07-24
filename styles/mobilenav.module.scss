@@ -1,0 +1,60 @@
+.container {
+  min-height: calc(100vh - 6rem);
+  ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    li {
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      border-bottom: 1px solid var(--darkGrey);
+      span {
+        height: 30%;
+        width: 2rem;
+        margin-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 1px solid black;
+        }
+        .mercury {
+          background-color: var(--mercury);
+        }
+        .venus {
+          background-color: var(--venus);
+        }
+        .earth {
+          background-color: var(--earth);
+        }
+        .mars {
+          background-color: var(--mars);
+        }
+        .jupiter {
+          background-color: var(--jupiter);
+        }
+        .saturn {
+          background-color: var(--saturn);
+        }
+        .uranus {
+          background-color: var(--uranus);
+        }
+        .neptune {
+          background-color: var(--neptune);
+        }
+      }
+      a {
+        width: 80%;
+        padding-left: 1rem;
+      }
+      p {
+        color: var(--darkGrey);
+      }
+    }
+  }
+}

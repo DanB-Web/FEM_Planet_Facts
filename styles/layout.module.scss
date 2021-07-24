@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  .background {
+    position: absolute;
+    top: 0rem;
+    height: 100%;
+    width: 100vw;
+    z-index: -2;
+    background-color: #000;
+  }
+  .stars {
+    position: absolute;
+    top: 0rem;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    fill: white;
+  }
+}

@@ -10,6 +10,7 @@ const Home = () => {
     router.push('./planets/Earth')
   }, [router])
 
+  //ADD SPINNER ON LOAD
   return (
     <Layout>
       Loading...

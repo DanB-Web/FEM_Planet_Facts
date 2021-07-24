@@ -1,22 +1,49 @@
 .container {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   margin-top: 0.4rem;
-  border: 1px solid red;
   button {
-    width: 22rem;
-    height: 2.6rem;
+    width: 100%;
+    height: 2.8rem;
     margin-top: 0.6rem;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: 1px solid var(--lightGrey);
+    color: var(--white);
     span {
       width: 10%;
+    }
+    p {
+      font-weight: bold;
     }
   }
   button:hover {
     background-color: var(--lightGrey);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6rem;
+    button {
+      height: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .container {
+    display: none;
   }
 }
