@@ -42,8 +42,6 @@ Users should be able to:
 - [Figma](https://www.figma.com/)
 - [Netlify](https://www.netlify.com/)
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I wanted to create a full Next applicaiton from scratch, using the integrated Next router. I created a seperate `planets` folder to hold the various views, and the URL slugs are generated at build time using `getStaticPaths` and `getStaticProps`static page generation - at build time, all the data is read from a supplied JSON file and the various views populated.
