@@ -39,6 +39,7 @@ const Planet = ({planet}) => {
         <Image 
           width={imageSize} 
           height={imageSize} 
+          priority={true}
           src={`/images/planet-${planet.name.toLowerCase()}-internal.svg`} 
           alt={`${planet.name} Internal Image`}></Image>
         </div>
@@ -49,6 +50,7 @@ const Planet = ({planet}) => {
           <Image 
           width={imageSize} 
           height={imageSize} 
+          priority={true}
           src={`/images/planet-${planet.name.toLowerCase()}.svg`} 
           alt={`${planet.name} Overview Image`}></Image>
         </div> 
@@ -61,6 +63,7 @@ const Planet = ({planet}) => {
       <Image 
         width={200} 
         height={200} 
+        priority={true}
         src={`/images/geology-${planet.name.toLowerCase()}.png`} 
         alt={`${planet.name} Geology Image`}>
       </Image>
